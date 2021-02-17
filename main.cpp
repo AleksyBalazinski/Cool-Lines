@@ -6,7 +6,7 @@
 
 int main()
 {
-    /*std::cout << "Number of lines (1 / 2): ";
+    std::cout << "Number of lines (1 / 2): ";
     int choice;
     std::cin >> choice;
     if(choice == 1)
@@ -27,18 +27,8 @@ int main()
 
         
         std::cout << "Angle bt. these lines: " << angleBtLines(l1, l2) << '\n';
-        std::cout << "Tan of the angle: " << tanOfAngleBtLines(l1, l2) << '\n';
-    }*/
+        std::cout << "Tan of this angle: " << tanOfAngleBtLines(l1, l2) << '\n';
+    }
 
-    Line l1{Point{Fraction{5, 2}, Fraction{3, 2}},Point{Fraction{3,9}, Fraction{7,19}}};
-    Line l2{Point{Fraction{6, 5}, Fraction{3, 19}},Point{Fraction{11,3}, Fraction{5,8}}};
-
-    l1.printLine(); std::cout << '\n'; //ok
-    l2.printLine(); std::cout << '\n'; //ok
-
-    
-
-    std::cout << "Tan of the angle: " << tanOfAngleBtLines(l1, l2) << '\n';
-    std::cout << "Angle bt. these lines: " << angleBtLines(l1, l2) << '\n';
-    //system("pause");
+    system("pause");
 }

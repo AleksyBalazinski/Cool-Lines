@@ -39,11 +39,7 @@ Line getLine()
 
 Fraction tanOfAngleBtLines(const Line& l1, const Line& l2)
 {
-    /*Fraction one {1,1};
-    std::cout << '\t' << l1.getM() - l2.getM() << '\n';
-    std::cout << '\t' << one + l1.getM() * l2.getM() << '\n';
-    std::cout << '\t' << (l1.getM() - l2.getM()) / (one + l1.getM() * l2.getM()) << '\n';*/
-    return (l1.getM() - l2.getM()) / (Fraction {1, 1} + l1.getM() * l2.getM());
+    return absFrac((l1.getM() - l2.getM()) / (Fraction {1, 1} + l1.getM() * l2.getM()));
 }
 
 double angleBtLines(const Line& l1, const Line& l2)
