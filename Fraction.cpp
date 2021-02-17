@@ -4,7 +4,7 @@
 
 void Fraction::reduce()
 {
-    int q = mathUtils::gcd(m_numerator, m_denominator);
+    long long q = mathUtils::gcd(m_numerator, m_denominator);
     m_numerator /= q;
     m_denominator /= q;
 }
@@ -54,4 +54,21 @@ Fraction operator/(const Fraction& a, const Fraction& b)
     temp.m_denominator = a.m_denominator * b.m_numerator;
     temp.reduce();
     return temp;
+}
+
+std::ostream& operator<<(std::ostream& out, const Fraction& frac)
+{
+    out << frac.m_numerator << '/' << frac.m_denominator;
+    return out;
+}
+
+std::istream& operator>>(std::istream& in, Fraction& frac)
+{
+    in >> frac.m_numerator >> frac.m_denominator;
+    return in;
+}
+
+Fraction absFrac(const Fraction& frac)
+{
+    return Fraction{ mathUtils::absVal(frac.getNumerator()), mathUtils::absVal(frac.getDenominator()) };
 }

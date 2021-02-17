@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cassert>
 #include <cstdlib> // for system();
 #include "Fraction.hpp"
 #include "Point.hpp"
@@ -7,23 +6,29 @@
 
 int main()
 {
-    // test 1
-    Fraction frac{Fraction{3, 5} * Fraction{7, 8} + Fraction{5, 9}};
-    frac.fracPow(2);
-    frac.printFraction();
-    std::cout << '\n';
+    std::cout << "Number of lines (1 / 2): ";
+    int choice;
+    std::cin >> choice;
+    if(choice == 1)
+    {
+        Line l0 = getLine();
+        std::cout << "l:\n";
+        l0.printLine(); std::cout << '\n';
+    }
+    else if(choice == 2)
+    {
+        Line l1 = getLine();
+        std::cout << "l1:\n";
+        l1.printLine(); std::cout << '\n';
 
-    // test 2
-    Point p1 {Fraction{1, 2}, Fraction{-2, 3}};
-    Point p2 {Fraction{511, 21}, Fraction{3, 7}};
-    Point sum = p1 + p2;
-    sum.printPoint();
-    std::cout << '\n';
-    //test 3
+        Line l2 = getLine();
+        std::cout << "l2:\n";
+        l2.printLine(); std::cout << '\n';
 
-    Line l {p1, p2};
-    l.printLine();
-    std::cout << '\n';
+        
+        std::cout << "Angle bt. these lines: " << angleBtLines(l1, l2) << '\n';
+        std::cout << "Tan of the angle: " << tanOfAngleBtLines(l1, l2) << '\n';
+    }
 
     system("pause");
 }

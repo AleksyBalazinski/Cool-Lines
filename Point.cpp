@@ -16,3 +16,9 @@ void Point::printPoint() const
     std::cout << '(' << getX().getNumerator() << '/' << getX().getDenominator() << ", " 
         << getY().getNumerator() << '/' << getY().getDenominator() << ")";
 }
+
+std::ostream& operator<<(std::ostream& out, const Point& p)
+{
+    out << '(' << p.m_x << ", " << p.m_y << ')';
+    return out;
+}
