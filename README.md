@@ -3,4 +3,4 @@ This program was designed to calculate line equation given two points. However, 
 A word of caution: the makefile was written from the top of my head and has not been tested!\
 # This is how it look like when executed
 
-![alt text](https://github.com/AleksyBalazinski/Cool-Lines/blob/main/Screenshot\ 2021-02-17\ 174317.png?raw=true)
+![alt text](https://github.com/AleksyBalazinski/Cool-Lines/blob/main/Screenshot%202021-02-17%20174317.png?raw=true)
