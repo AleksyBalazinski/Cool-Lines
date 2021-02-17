@@ -19,4 +19,8 @@ class Line
     void printLine() const;
 };
 
+Line getLine();
+Fraction tanOfAngleBtLines(const Line& l1, const Line& l2);
+double angleBtLines(const Line& l1, const Line& l2);
+
 #endif //LINE_HPP

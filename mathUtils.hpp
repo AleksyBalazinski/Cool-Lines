@@ -3,8 +3,9 @@
 
 namespace mathUtils
 {
-    int gcd(int x, int y);
-    int powInt(int x, int n);
+    long long gcd(long long x, long long y);
+    long long powInt(long long x, int n);
+    long long absVal(long long x);
 }
 
 #endif //MATH_UTILS_HPP 
