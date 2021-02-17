@@ -55,3 +55,10 @@ Fraction operator/(const Fraction& a, const Fraction& b)
     temp.reduce();
     return temp;
 }
+
+std::ostream& operator<<(std::ostream& out, const Fraction& frac)
+{
+    //std::cout << m_numerator << '/' << m_denominator;
+    out << frac.m_numerator << '/' << frac.m_denominator;
+    return out;
+}

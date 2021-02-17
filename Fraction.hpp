@@ -2,6 +2,7 @@
 #define FRACTION_HPP
 
 #include <cassert>
+#include <iostream>
 
 class Fraction
 {
@@ -19,12 +20,15 @@ class Fraction
     void reduce();
     int getNumerator() const { return m_numerator; }
     int getDenominator() const { return m_denominator; }
-    void printFraction() const;
+    void printFraction() const; // deprecated
     void fracPow(int n); // raises the fraction to a certain integer-type power
+    double toDouble() { return static_cast<double>(m_numerator) / m_denominator; }
     friend Fraction operator+(const Fraction& a, const Fraction& b);
     friend Fraction operator-(const Fraction& a, const Fraction& b);
     friend Fraction operator*(const Fraction& a, const Fraction& b);
     friend Fraction operator/(const Fraction& a, const Fraction& b);
+
+    friend std::ostream& operator<< (std::ostream& out, const Fraction& frac);
 };
 
 
